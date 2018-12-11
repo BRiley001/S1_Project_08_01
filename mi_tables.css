@@ -14,11 +14,58 @@
 */
 
 /* Table Styles */
+/* the table will have a gray border around it, and go from blue-ish to black top to bottom */
+table {
+    background: linear-gradient(rgb(190, 215, 255), black);
+    border: 5px solid gray;
+}
 
+/* the header cells and data cels will have a gray border, increased space between lines, and padding around them */
+th,
+td {
+    border: 3px solid gray;
+    line-height: 1.4em;
+    padding: 8px;
+}
 
+/* the header cells will all have a black background, a blue text, and normal font weight */
+th {
+    background: black;
+    color: rgb(130, 210, 255);
+    font-weight: normal;
+}
+
+/* the data cells will have white text, a smaller font-size, and be aligned to the top of the cells */
+td {
+    color: white;
+    font-size: 0.9em;
+    text-align: top;
+}
 
 /* Column Styles */
+/* The first column has a width of 24% */
+col#firstCol {
+    width: 24%;
+}
 
-
+/* all other cells have a width of 19% */
+col.dataCols {
+    width: 19%;
+}
 
 /* Table Header Styles */
+/* the table rows within the thad have a height of 60px */
+thead tr {
+    height: 60px;
+}
+
+/* the first table header within the first table row within the thead has a larger font */
+thead tr:first-of-type th:first-of-type {
+    font-size: 2em;
+}
+
+/* any table headers that are not the first one, within the first row, within the thead, are transparent and has black text. */
+thead tr:first-of-type th:not(:first-of-type) {
+    background: transparent;
+    color: black;
+}
